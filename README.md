@@ -1,54 +1,39 @@
 # Fundamental of Nursing Exam Practice — v1.0
 
-A standalone, responsive HTML/CSS/JavaScript educational practice app designed for GitHub Pages. The app uses the 40 questions and supplied answer keys from the attached prompt in their original order. It is independent practice material, not an official examination or endorsement.
-
-## Project identity
-
-- App name: `Fundamental of Nursing Exam Practice — v1.0`
-- Recommended repository: `fundamental-of-nursing-exam-practice`
-- Technical ID: `fundamental-of-nursing-exam-practice`
-- Domain: `Fundamental of Nursing Exam Practice`
-- Audience field as supplied: `Mental Health Disorders and Nursing Student`
-- Interface language: English
-- Description as supplied: `Reactive app, smart education and moderne learning`
-
-**Source consistency note:** the supplied audience field refers to mental health disorders, while the app title and the supplied questions cover fundamental nursing topics (blood, nursing history, professional duties, ethics, nursing roles, communication, anatomy, and medication routes). The audience value is preserved as supplied rather than silently rewritten.
+A standalone, responsive HTML/CSS/JavaScript educational practice app for GitHub Pages. The 40 questions supplied in the project brief are retained in their original order and wording. This is independent educational practice material, not an official examination or endorsement.
 
 ## Files
 
 - `index.html` — application structure
-- `styles.css` — responsive styling
-- `config.js` — identity, unlock threshold, and commercial links
-- `questions.js` — complete 40-question bank with supplied answer keys
-- `app.js` — navigation, answer state, scoring, review, sharing, and unlock logic
-- `README.md` — project and publishing instructions
-- `TEST-CHECKLIST.md` — validation checklist
-- `TEST-RESULTS.md` — honest record of checks performed
+- `styles.css` — responsive styling and colorful results-page resource banner
+- `config.js` — app identity, 70% Level 2 threshold, and four commercial links
+- `questions.js` — 40-question bank and supplied answer keys
+- `app.js` — navigation, answer state, scoring, answer review, sharing, and level unlocking
+- `README.md` — project and deployment instructions
+- `TEST-CHECKLIST.md` — manual validation checklist
+- `TEST-RESULTS.md` — automated checks performed and outstanding tests
+
+## Updated results-page resource banner
+
+The four colorful commercial resource cards are shown inside the Results screen after a level is completed, not on the Home or Quiz screens. Cards use blue, green, orange, and purple styling with directional arrows and responsive desktop, tablet, and mobile layouts. Commercial URLs are preserved exactly as provided.
 
 ## Run locally
 
-Open `index.html` in a modern browser. For representative testing of browser storage and sharing, use a local static server or GitHub Pages. No build step or package installation is required.
+Open `index.html` in a modern browser. For representative testing of sharing and browser storage, use a local static server or GitHub Pages. No build step or package installation is required.
 
-## Levels and unlock
+## Publish on GitHub Pages
 
-- Level 1: questions q1–q20.
-- Level 2: questions q21–q40.
-- Default Level 2 threshold: 70% on Level 1.
-- Change `minimumPercent` in `config.js` to configure the threshold.
+1. Create a **new, separate** repository named `fundamental-of-nursing-exam-practice`. Do not modify another application's repository.
+2. Upload all eight files to the repository root. Confirm `index.html` is at the root, not inside a nested folder.
+3. Open **Settings → Pages**.
+4. Select **Deploy from a branch**, choose the default branch (usually `main`) and `/ (root)`, then save.
+5. Wait for deployment and open the Pages URL shown in Settings.
+6. Test scoring, all four offer links, sharing fallback, and Level 2 unlocking on desktop and mobile.
 
-Unlock state is stored in the browser's local storage on that device/browser. It is not server-side verification and can be cleared or changed by the user.
+## Configuration and unlock behavior
 
-## Commercial links
+Change `unlock.minimumPercent` in `config.js` to configure the passing threshold. Level 2 requires a Level 1 score of at least 70% by default. The gate is client-side and is not secure access control; no server-side validation is implemented.
 
-The prompt provides four distinct URLs, so all four are included in `config.js`: practice app, ebook, Ebook + App bundle ($14.98), and Nursing Specialties Master Bundle ($89.98). The links are reproduced exactly as supplied and have not been independently checked for availability or product contents.
+## Question-bank note
 
-## Publish with GitHub Pages
-
-1. Create a **new** GitHub repository named `fundamental-of-nursing-exam-practice`.
-2. Upload all eight files so `index.html` is at the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Select the publishing source/branch and root folder as appropriate, then save.
-5. Wait for GitHub Pages to publish the site and open the URL shown in Settings → Pages.
-6. Run the checklist in `TEST-CHECKLIST.md` against the published site.
-
-No GitHub repository was created, and no other application or repository was modified.
+Question wording, option text, order, and answer keys are retained from the supplied prompt. Explanations were not provided and have not been invented. Have a qualified nursing educator review the material before relying on it for clinical exam preparation.

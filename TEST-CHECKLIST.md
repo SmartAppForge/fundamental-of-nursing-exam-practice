@@ -1,30 +1,25 @@
 # Test checklist
 
 ## Question bank
-- [ ] Exactly 40 questions, preserved in source order.
-- [ ] Level 1 contains q1–q20.
-- [ ] Level 2 contains q21–q40.
-- [ ] IDs q1–q40 are unique.
-- [ ] Every question has options A, B, C, and D.
-- [ ] Every supplied answer key maps to one of the question's options.
-- [ ] No question or answer explanation has been invented.
-- [ ] Review the source inconsistency: the audience field mentions mental health, but the title/questions concern fundamental nursing.
+- [ ] Confirm q1–q40 are present and in order.
+- [ ] Confirm 20 questions are assigned to each level.
+- [ ] Confirm each question has A/B/C/D and a valid answer key.
 
-## Functionality
-- [ ] Home screen loads.
-- [ ] Level 1 starts.
-- [ ] Unanswered questions cannot be submitted.
-- [ ] Previous/next navigation preserves selected answers.
-- [ ] Final score matches recorded answers.
-- [ ] Answer review shows selected and correct answers.
-- [ ] Level 2 stays locked until the configured score threshold is met.
-- [ ] Sharing works or a fallback is presented.
-- [ ] All four commercial buttons open their supplied URLs in a new tab.
-- [ ] No blocking JavaScript errors.
+## Navigation and scoring
+- [ ] Start Level 1 and verify question navigation.
+- [ ] Confirm a question cannot be submitted without a selection.
+- [ ] Verify score, correct/incorrect counts, and answer review.
+- [ ] Below 70%, confirm the NEXT STEP button says Retry Level 1 and works.
+- [ ] At 70% or above, confirm Start Level 2 opens q21–q40.
+- [ ] Confirm Level 2 results and retry behavior.
 
-## Publication and responsive behavior
-- [ ] `index.html` is at repository root.
-- [ ] All eight required files are present.
-- [ ] Layout works on desktop and mobile.
-- [ ] GitHub Pages deployment succeeds.
-- [ ] Retest the published site and sharing behavior after deployment.
+## Results and offers
+- [ ] Confirm the commercial banner is absent from Home and Quiz.
+- [ ] Confirm four colorful offer cards appear on Results only.
+- [ ] Verify each card opens its exact configured URL in a new tab.
+- [ ] Test native sharing or its fallback.
+
+## Responsive and deployment
+- [ ] Check desktop, tablet, and mobile layouts.
+- [ ] Check browser console for blocking errors.
+- [ ] Verify all files are at repository root and GitHub Pages loads.
